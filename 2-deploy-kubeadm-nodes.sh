@@ -1,6 +1,6 @@
 #!/bin/bash
 NODES=$(echo worker{1..2})
-for NODE in ${NODES}; do multipass launch --name ${NODE} --cpus 2 --mem 2G --disk 8G; done
+for NODE in ${NODES}; do multipass launch --name ${NODE} --cpus 2 --mem 2G --disk 8G 18.04; done
 
 for NODE in ${NODES}; do
 multipass exec ${NODE} -- bash -c 'wget https://packages.cloud.google.com/apt/doc/apt-key.gpg'
